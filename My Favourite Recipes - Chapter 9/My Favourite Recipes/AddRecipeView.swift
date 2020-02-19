@@ -24,6 +24,10 @@ struct AddRecipeView: View {
     
     @State private var selectedCountry = 0
     
+    var placeHolderImageName: String {
+        return UIDevice.current.userInterfaceIdiom == .pad ? "placeholder-add-image_iPad" : "placeholder-add-image"
+    }
+    
     @Environment(\.presentationMode) var presentationMode
     
     internal var countries = Helper.getCountries()
@@ -99,7 +103,7 @@ struct AddRecipeView: View {
                         Text("Save")
                     }
             )
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
         
     }
     

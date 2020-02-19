@@ -13,7 +13,9 @@ struct RecipeDetailView: View {
     @State var recipe = RecipeModel()
     @State private var viewIndex = 0
     
-    @EnvironmentObject var userData: UserData
+    private var isFavourite: Bool {
+        return Helper.getFavourites().contains(where: {($0.name == recipe.name)})
+    }
     
     var body: some View {
         // VStack so we can list our components vertically
@@ -36,7 +38,7 @@ struct RecipeDetailView: View {
                     Helper.addRemoveFavourite(recipe: self.recipe)
                     self.recipe.favourite.toggle()
                 }) {
-                    Image(systemName: userData.favourites.contains(where: {($0.name == recipe.name)}) ? "star.fill" : "star")
+                    Image(systemName: isFavourite ? "star.fill" : "star")
                 }
                 
             }

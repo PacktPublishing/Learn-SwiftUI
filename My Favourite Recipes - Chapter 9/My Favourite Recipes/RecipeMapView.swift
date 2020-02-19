@@ -33,7 +33,7 @@ struct RecipeMapView: View {
                     presentationMode: presentationMode,
                     filter: $filter)
                 .navigationBarTitle(Text("Recipes of the World!"))
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
         
     }
     

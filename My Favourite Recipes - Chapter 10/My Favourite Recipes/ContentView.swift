@@ -20,7 +20,7 @@ struct ContentView: View {
         NavigationView {
             
             ListView(filter: $filter, showAddRecipe: $showAddRecipe)
-                .navigationBarTitle(Text(""), displayMode: .inline) // Hack!
+                .navigationBarTitle(Text(""), displayMode: .inline) // Hack due to bug in Xcode!
                 .navigationBarItems(leading: HStack {
                     Button(action: {
                         self.showMap.toggle()

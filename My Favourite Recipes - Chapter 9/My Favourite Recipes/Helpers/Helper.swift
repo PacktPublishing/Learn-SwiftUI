@@ -54,6 +54,11 @@ struct Helper {
     
     // Gets List of Saved Recipes
     static func getRecipes(filter: String = "") -> [RecipeModel] {
+        
+        #if DEBUG
+        return mockRecipes()
+        #endif
+        
         if let data = UserDefaults.standard.data(forKey: "recipes") {
             var array = try! JSONDecoder().decode([RecipeModel].self, from: data)
             
@@ -76,7 +81,7 @@ struct Helper {
         recipies.append(RecipeModel(name: "Hearty Parsnip Soup", origin: "UK", countryCode: "GB", favourite: false, ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
         recipies.append(RecipeModel(name: "Honey & Soy Salmon", origin: "China", countryCode: "CN", favourite: false, ingredients: getMockIngredients(), recipe: getMockRecipe(), imageData: Data()))
         
-        recipies.append(contentsOf: getRecipes())
+        //recipies.append(contentsOf: getRecipes())
         
         return recipies
         

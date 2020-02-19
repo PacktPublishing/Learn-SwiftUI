@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ListView: View {
         
     @State private var viewIndex = 0
     @State private var showAddRecipe = false
@@ -43,6 +43,7 @@ struct ContentView: View {
                 }
                 
             }
+            .navigationBarTitle(Text(""), displayMode: .inline) // Hack due to bug in Xcode!
             .navigationBarItems(leading: HStack {
                 Button(action: {
                     self.showMap.toggle()
@@ -68,7 +69,8 @@ struct ContentView: View {
                     AddRecipeView()
                 })
             
-        }
+        }.navigationViewStyle(DoubleColumnNavigationViewStyle())
+        .padding()
     }
 }
 
@@ -78,6 +80,6 @@ class UserData: ObservableObject {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ListView()
     }
 }
