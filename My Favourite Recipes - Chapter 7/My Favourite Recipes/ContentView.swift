@@ -60,8 +60,8 @@ struct ContentView: View {
     }
 }
 
-class UserData: ObservableObject {
-    @Published var favourites = Helper.getFavourites()
+class AppSettings: ObservableObject {
+    @Published var fontColor = Color.black
 }
 
 struct ContentView_Previews: PreviewProvider {

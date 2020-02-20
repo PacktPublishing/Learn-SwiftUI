@@ -17,6 +17,8 @@ struct RecipeDetailView: View {
         return Helper.getFavourites().contains(where: {($0.name == recipe.name)})
     }
     
+    @EnvironmentObject var settings: AppSettings
+
     var body: some View {
         // VStack so we can list our components vertically
         VStack(alignment: .leading, spacing: 15) {
@@ -32,10 +34,12 @@ struct RecipeDetailView: View {
                 Text("\(recipe.name)")
                     .font(.title)
                     .padding(.leading, 10)
+                    .foregroundColor(self.settings.fontColor)
                 
                 // Favourites Button
                 Button(action: {
                     Helper.addRemoveFavourite(recipe: self.recipe)
+                    self.settings.fontColor = self.isFavourite ? .orange : .black
                     self.recipe.favourite.toggle()
                 }) {
                     Image(systemName: isFavourite ? "star.fill" : "star")

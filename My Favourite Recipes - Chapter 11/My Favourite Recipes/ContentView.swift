@@ -53,6 +53,10 @@ struct ContentView: View {
     }
 }
 
+class AppSettings: ObservableObject {
+    @Published var fontColor = Color.black
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
