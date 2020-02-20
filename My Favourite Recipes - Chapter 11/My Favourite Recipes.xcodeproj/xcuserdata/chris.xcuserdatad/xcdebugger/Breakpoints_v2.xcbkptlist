@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A789E2B5-2EF8-4068-BDE5-B510C6C1C385"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SwiftErrorBreakpoint">
+         <BreakpointContent
+            uuid = "34D86E54-BFE8-45EA-8032-BE6308B9BC88"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62A47998-2BDF-4B14-98E7-2AFF76647041"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "My Favourite Recipes Watch Extension/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8FBF5C53-B1A9-4DCB-8098-ADF8FEC65F35"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "My Favourite Recipes Watch Extension/RecipeListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "8FBF5C53-B1A9-4DCB-8098-ADF8FEC65F35 - be59d1049d2c04a6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;My_Favourite_Recipes_Watch_Extension.RecipeModel&gt;, Foundation.UUID, SwiftUI.HStack&lt;SwiftUI.NavigationLink&lt;SwiftUI.Text, My_Favourite_Recipes_Watch_Extension.IngredientsView&gt;&gt;&gt;&gt;)&gt; in My_Favourite_Recipes_Watch_Extension.RecipeListView.body.getter : some"
+                  moduleName = "My Favourite Recipes Watch Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chris/Source/Learn%20SwiftUI/My%20Favourite%20Recipes/My%20Favourite%20Recipes%20Watch%20Extension/RecipeListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "549">
+               </Location>
+               <Location
+                  uuid = "8FBF5C53-B1A9-4DCB-8098-ADF8FEC65F35 - a02f7c44a622cc3c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (My_Favourite_Recipes_Watch_Extension.RecipeModel) -&gt; SwiftUI.NavigationLink&lt;SwiftUI.Text, My_Favourite_Recipes_Watch_Extension.IngredientsView&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;My_Favourite_Recipes_Watch_Extension.RecipeModel&gt;, Foundation.UUID, SwiftUI.HStack&lt;SwiftUI.NavigationLink&lt;SwiftUI.Text, My_Favourite_Recipes_Watch_Extension.IngredientsView&gt;&gt;&gt;&gt;)&gt; in My_Favourite_Recipes_Watch_Extension.RecipeListView.body.getter : some"
+                  moduleName = "My Favourite Recipes Watch Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chris/Source/Learn%20SwiftUI/My%20Favourite%20Recipes/My%20Favourite%20Recipes%20Watch%20Extension/RecipeListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "34">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

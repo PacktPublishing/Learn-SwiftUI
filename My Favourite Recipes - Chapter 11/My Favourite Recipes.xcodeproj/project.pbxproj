@@ -1,0 +1,742 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		831539A32384982000CAD2DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831539A22384982000CAD2DD /* AppDelegate.swift */; };
+		831539A52384982000CAD2DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831539A42384982000CAD2DD /* SceneDelegate.swift */; };
+		831539A72384982000CAD2DD /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831539A62384982000CAD2DD /* ListView.swift */; };
+		831539A92384982200CAD2DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 831539A82384982200CAD2DD /* Assets.xcassets */; };
+		831539AC2384982200CAD2DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 831539AB2384982200CAD2DD /* Preview Assets.xcassets */; };
+		831539AF2384982200CAD2DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831539AD2384982200CAD2DD /* LaunchScreen.storyboard */; };
+		8317DFE023D312E000ECB9A7 /* AnnotationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A3401A23CF77B100E9E6FD /* AnnotationPin.swift */; };
+		8317DFE423D3838000ECB9A7 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8317DFE323D3838000ECB9A7 /* IngredientsView.swift */; };
+		8317DFE623D3BD6C00ECB9A7 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8317DFE523D3BD6C00ECB9A7 /* WatchManager.swift */; };
+		8317DFEB23D3CC1200ECB9A7 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EC485523A0539600F9E458 /* Helper.swift */; };
+		8317DFEE23D8F42A00ECB9A7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8317DFEC23D8F42A00ECB9A7 /* HomeView.swift */; };
+		8317DFF023D9040800ECB9A7 /* WatchHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8317DFEF23D9040800ECB9A7 /* WatchHelper.swift */; };
+		8326195723AD75C100E3D52D /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326195623AD75C100E3D52D /* AddRecipeView.swift */; };
+		834CF2C42385F425007BE6C5 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834CF2C32385F425007BE6C5 /* RecipeModel.swift */; };
+		834D0B7723B6135200C9D2EC /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D0B7623B6135200C9D2EC /* ImageHelper.swift */; };
+		834D0B7923B6273B00C9D2EC /* TextHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D0B7823B6273B00C9D2EC /* TextHelper.swift */; };
+		836ED86B239FAFA300B317FC /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836ED86A239FAFA300B317FC /* RecipeView.swift */; };
+		8394D58623C94A870044936A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394D58523C94A870044936A /* ContentView.swift */; };
+		8394D58823C94FAA0044936A /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394D58723C94FAA0044936A /* WelcomeView.swift */; };
+		83A33FF223CF596900E9E6FD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A33FF023CF596900E9E6FD /* Interface.storyboard */; };
+		83A33FF423CF596A00E9E6FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A33FF323CF596A00E9E6FD /* Assets.xcassets */; };
+		83A33FFB23CF596A00E9E6FD /* My Favourite Recipes Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 83A33FFA23CF596A00E9E6FD /* My Favourite Recipes Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		83A3400023CF596A00E9E6FD /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A33FFF23CF596A00E9E6FD /* RecipeListView.swift */; };
+		83A3400223CF596A00E9E6FD /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A3400123CF596A00E9E6FD /* HostingController.swift */; };
+		83A3400423CF596A00E9E6FD /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A3400323CF596A00E9E6FD /* ExtensionDelegate.swift */; };
+		83A3400623CF596B00E9E6FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A3400523CF596B00E9E6FD /* Assets.xcassets */; };
+		83A3400923CF596B00E9E6FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A3400823CF596B00E9E6FD /* Preview Assets.xcassets */; };
+		83A3400D23CF596B00E9E6FD /* My Favourite Recipes Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 83A33FEE23CF596900E9E6FD /* My Favourite Recipes Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		83A3401623CF75D000E9E6FD /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834CF2C32385F425007BE6C5 /* RecipeModel.swift */; };
+		83A3401B23CF77B100E9E6FD /* AnnotationPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A3401A23CF77B100E9E6FD /* AnnotationPin.swift */; };
+		83A65E1C23BB8B1200CFA68F /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A65E1B23BB8B1100CFA68F /* NetworkHelper.swift */; };
+		83A65E7F23BEB4FE00CFA68F /* RecipeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A65E7E23BEB4FE00CFA68F /* RecipeMapView.swift */; };
+		83A65E8123BF5CE000CFA68F /* MapKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A65E8023BF5CE000CFA68F /* MapKitHelper.swift */; };
+		83A65E8323BF946F00CFA68F /* MapLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A65E8223BF946F00CFA68F /* MapLocationManager.swift */; };
+		83EC485623A0539600F9E458 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EC485523A0539600F9E458 /* Helper.swift */; };
+		83EC485823A2FC3F00F9E458 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EC485723A2FC3F00F9E458 /* RecipeDetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83A33FFC23CF596A00E9E6FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 831539972384982000CAD2DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83A33FF923CF596A00E9E6FD;
+			remoteInfo = "My Favourite Recipes Watch Extension";
+		};
+		83A3400B23CF596B00E9E6FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 831539972384982000CAD2DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83A33FED23CF596900E9E6FD;
+			remoteInfo = "My Favourite Recipes Watch";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		83A3400E23CF596B00E9E6FD /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				83A3400D23CF596B00E9E6FD /* My Favourite Recipes Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A3401123CF596B00E9E6FD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				83A33FFB23CF596A00E9E6FD /* My Favourite Recipes Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8315399F2384982000CAD2DD /* My Favourite Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Favourite Recipes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		831539A22384982000CAD2DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		831539A42384982000CAD2DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		831539A62384982000CAD2DD /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		831539A82384982200CAD2DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		831539AB2384982200CAD2DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		831539AE2384982200CAD2DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		831539B02384982200CAD2DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8317DFE323D3838000ECB9A7 /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
+		8317DFE523D3BD6C00ECB9A7 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
+		8317DFEC23D8F42A00ECB9A7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8317DFEF23D9040800ECB9A7 /* WatchHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHelper.swift; sourceTree = "<group>"; };
+		8326195623AD75C100E3D52D /* AddRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView.swift; sourceTree = "<group>"; };
+		834CF2C32385F425007BE6C5 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		834D0B7623B6135200C9D2EC /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		834D0B7823B6273B00C9D2EC /* TextHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHelper.swift; sourceTree = "<group>"; };
+		836ED86A239FAFA300B317FC /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		8394D58523C94A870044936A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8394D58723C94FAA0044936A /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		83A33FEE23CF596900E9E6FD /* My Favourite Recipes Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Favourite Recipes Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A33FF123CF596900E9E6FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		83A33FF323CF596A00E9E6FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83A33FF523CF596A00E9E6FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83A33FFA23CF596A00E9E6FD /* My Favourite Recipes Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "My Favourite Recipes Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A33FFF23CF596A00E9E6FD /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
+		83A3400123CF596A00E9E6FD /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		83A3400323CF596A00E9E6FD /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		83A3400523CF596B00E9E6FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83A3400823CF596B00E9E6FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		83A3400A23CF596B00E9E6FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83A3401A23CF77B100E9E6FD /* AnnotationPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationPin.swift; sourceTree = "<group>"; };
+		83A65E1B23BB8B1100CFA68F /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		83A65E7E23BEB4FE00CFA68F /* RecipeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMapView.swift; sourceTree = "<group>"; };
+		83A65E8023BF5CE000CFA68F /* MapKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitHelper.swift; sourceTree = "<group>"; };
+		83A65E8223BF946F00CFA68F /* MapLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocationManager.swift; sourceTree = "<group>"; };
+		83EC485523A0539600F9E458 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		83EC485723A2FC3F00F9E458 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8315399C2384982000CAD2DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A33FF723CF596A00E9E6FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		831539962384982000CAD2DD = {
+			isa = PBXGroup;
+			children = (
+				831539A12384982000CAD2DD /* My Favourite Recipes */,
+				83A33FEF23CF596900E9E6FD /* My Favourite Recipes Watch */,
+				83A33FFE23CF596A00E9E6FD /* My Favourite Recipes Watch Extension */,
+				831539A02384982000CAD2DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		831539A02384982000CAD2DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8315399F2384982000CAD2DD /* My Favourite Recipes.app */,
+				83A33FEE23CF596900E9E6FD /* My Favourite Recipes Watch.app */,
+				83A33FFA23CF596A00E9E6FD /* My Favourite Recipes Watch Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		831539A12384982000CAD2DD /* My Favourite Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				83A3401923CF775000E9E6FD /* Models */,
+				83A65E1D23BB8B1700CFA68F /* Helpers */,
+				831539A22384982000CAD2DD /* AppDelegate.swift */,
+				831539A42384982000CAD2DD /* SceneDelegate.swift */,
+				8394D58523C94A870044936A /* ContentView.swift */,
+				831539A62384982000CAD2DD /* ListView.swift */,
+				831539A82384982200CAD2DD /* Assets.xcassets */,
+				831539AD2384982200CAD2DD /* LaunchScreen.storyboard */,
+				831539B02384982200CAD2DD /* Info.plist */,
+				831539AA2384982200CAD2DD /* Preview Content */,
+				836ED86A239FAFA300B317FC /* RecipeView.swift */,
+				83EC485723A2FC3F00F9E458 /* RecipeDetailView.swift */,
+				8326195623AD75C100E3D52D /* AddRecipeView.swift */,
+				83A65E7E23BEB4FE00CFA68F /* RecipeMapView.swift */,
+				8394D58723C94FAA0044936A /* WelcomeView.swift */,
+			);
+			path = "My Favourite Recipes";
+			sourceTree = "<group>";
+		};
+		831539AA2384982200CAD2DD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				831539AB2384982200CAD2DD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		83A33FEF23CF596900E9E6FD /* My Favourite Recipes Watch */ = {
+			isa = PBXGroup;
+			children = (
+				83A33FF023CF596900E9E6FD /* Interface.storyboard */,
+				83A33FF323CF596A00E9E6FD /* Assets.xcassets */,
+				83A33FF523CF596A00E9E6FD /* Info.plist */,
+			);
+			path = "My Favourite Recipes Watch";
+			sourceTree = "<group>";
+		};
+		83A33FFE23CF596A00E9E6FD /* My Favourite Recipes Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8317DFEF23D9040800ECB9A7 /* WatchHelper.swift */,
+				8317DFEC23D8F42A00ECB9A7 /* HomeView.swift */,
+				83A33FFF23CF596A00E9E6FD /* RecipeListView.swift */,
+				8317DFE323D3838000ECB9A7 /* IngredientsView.swift */,
+				83A3400123CF596A00E9E6FD /* HostingController.swift */,
+				83A3400323CF596A00E9E6FD /* ExtensionDelegate.swift */,
+				83A3400523CF596B00E9E6FD /* Assets.xcassets */,
+				83A3400A23CF596B00E9E6FD /* Info.plist */,
+				83A3400723CF596B00E9E6FD /* Preview Content */,
+			);
+			path = "My Favourite Recipes Watch Extension";
+			sourceTree = "<group>";
+		};
+		83A3400723CF596B00E9E6FD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				83A3400823CF596B00E9E6FD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		83A3401923CF775000E9E6FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				834CF2C32385F425007BE6C5 /* RecipeModel.swift */,
+				83A3401A23CF77B100E9E6FD /* AnnotationPin.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		83A65E1D23BB8B1700CFA68F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				83EC485523A0539600F9E458 /* Helper.swift */,
+				834D0B7623B6135200C9D2EC /* ImageHelper.swift */,
+				834D0B7823B6273B00C9D2EC /* TextHelper.swift */,
+				83A65E1B23BB8B1100CFA68F /* NetworkHelper.swift */,
+				83A65E8023BF5CE000CFA68F /* MapKitHelper.swift */,
+				83A65E8223BF946F00CFA68F /* MapLocationManager.swift */,
+				8317DFE523D3BD6C00ECB9A7 /* WatchManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8315399E2384982000CAD2DD /* My Favourite Recipes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 831539B32384982200CAD2DD /* Build configuration list for PBXNativeTarget "My Favourite Recipes" */;
+			buildPhases = (
+				8315399B2384982000CAD2DD /* Sources */,
+				8315399C2384982000CAD2DD /* Frameworks */,
+				8315399D2384982000CAD2DD /* Resources */,
+				83A3400E23CF596B00E9E6FD /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83A3400C23CF596B00E9E6FD /* PBXTargetDependency */,
+			);
+			name = "My Favourite Recipes";
+			productName = "My Favourite Recipes";
+			productReference = 8315399F2384982000CAD2DD /* My Favourite Recipes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83A33FED23CF596900E9E6FD /* My Favourite Recipes Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83A3401523CF596B00E9E6FD /* Build configuration list for PBXNativeTarget "My Favourite Recipes Watch" */;
+			buildPhases = (
+				83A33FEC23CF596900E9E6FD /* Resources */,
+				83A3401123CF596B00E9E6FD /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83A33FFD23CF596A00E9E6FD /* PBXTargetDependency */,
+			);
+			name = "My Favourite Recipes Watch";
+			productName = "My Favourite Recipes Watch";
+			productReference = 83A33FEE23CF596900E9E6FD /* My Favourite Recipes Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		83A33FF923CF596A00E9E6FD /* My Favourite Recipes Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83A3401423CF596B00E9E6FD /* Build configuration list for PBXNativeTarget "My Favourite Recipes Watch Extension" */;
+			buildPhases = (
+				83A33FF623CF596A00E9E6FD /* Sources */,
+				83A33FF723CF596A00E9E6FD /* Frameworks */,
+				83A33FF823CF596A00E9E6FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "My Favourite Recipes Watch Extension";
+			productName = "My Favourite Recipes Watch Extension";
+			productReference = 83A33FFA23CF596A00E9E6FD /* My Favourite Recipes Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		831539972384982000CAD2DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = Packt;
+				TargetAttributes = {
+					8315399E2384982000CAD2DD = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					83A33FED23CF596900E9E6FD = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					83A33FF923CF596A00E9E6FD = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 8315399A2384982000CAD2DD /* Build configuration list for PBXProject "My Favourite Recipes" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 831539962384982000CAD2DD;
+			productRefGroup = 831539A02384982000CAD2DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8315399E2384982000CAD2DD /* My Favourite Recipes */,
+				83A33FED23CF596900E9E6FD /* My Favourite Recipes Watch */,
+				83A33FF923CF596A00E9E6FD /* My Favourite Recipes Watch Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8315399D2384982000CAD2DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831539AF2384982200CAD2DD /* LaunchScreen.storyboard in Resources */,
+				831539AC2384982200CAD2DD /* Preview Assets.xcassets in Resources */,
+				831539A92384982200CAD2DD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A33FEC23CF596900E9E6FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A33FF423CF596A00E9E6FD /* Assets.xcassets in Resources */,
+				83A33FF223CF596900E9E6FD /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A33FF823CF596A00E9E6FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A3400923CF596B00E9E6FD /* Preview Assets.xcassets in Resources */,
+				83A3400623CF596B00E9E6FD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8315399B2384982000CAD2DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83EC485823A2FC3F00F9E458 /* RecipeDetailView.swift in Sources */,
+				831539A32384982000CAD2DD /* AppDelegate.swift in Sources */,
+				83A65E8323BF946F00CFA68F /* MapLocationManager.swift in Sources */,
+				83A3401B23CF77B100E9E6FD /* AnnotationPin.swift in Sources */,
+				8394D58823C94FAA0044936A /* WelcomeView.swift in Sources */,
+				834D0B7923B6273B00C9D2EC /* TextHelper.swift in Sources */,
+				834D0B7723B6135200C9D2EC /* ImageHelper.swift in Sources */,
+				83A65E7F23BEB4FE00CFA68F /* RecipeMapView.swift in Sources */,
+				83A65E1C23BB8B1200CFA68F /* NetworkHelper.swift in Sources */,
+				8326195723AD75C100E3D52D /* AddRecipeView.swift in Sources */,
+				834CF2C42385F425007BE6C5 /* RecipeModel.swift in Sources */,
+				8317DFE623D3BD6C00ECB9A7 /* WatchManager.swift in Sources */,
+				836ED86B239FAFA300B317FC /* RecipeView.swift in Sources */,
+				831539A52384982000CAD2DD /* SceneDelegate.swift in Sources */,
+				8394D58623C94A870044936A /* ContentView.swift in Sources */,
+				831539A72384982000CAD2DD /* ListView.swift in Sources */,
+				83EC485623A0539600F9E458 /* Helper.swift in Sources */,
+				83A65E8123BF5CE000CFA68F /* MapKitHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A33FF623CF596A00E9E6FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8317DFE023D312E000ECB9A7 /* AnnotationPin.swift in Sources */,
+				8317DFEB23D3CC1200ECB9A7 /* Helper.swift in Sources */,
+				83A3400223CF596A00E9E6FD /* HostingController.swift in Sources */,
+				83A3401623CF75D000E9E6FD /* RecipeModel.swift in Sources */,
+				8317DFE423D3838000ECB9A7 /* IngredientsView.swift in Sources */,
+				8317DFF023D9040800ECB9A7 /* WatchHelper.swift in Sources */,
+				8317DFEE23D8F42A00ECB9A7 /* HomeView.swift in Sources */,
+				83A3400023CF596A00E9E6FD /* RecipeListView.swift in Sources */,
+				83A3400423CF596A00E9E6FD /* ExtensionDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83A33FFD23CF596A00E9E6FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83A33FF923CF596A00E9E6FD /* My Favourite Recipes Watch Extension */;
+			targetProxy = 83A33FFC23CF596A00E9E6FD /* PBXContainerItemProxy */;
+		};
+		83A3400C23CF596B00E9E6FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83A33FED23CF596900E9E6FD /* My Favourite Recipes Watch */;
+			targetProxy = 83A3400B23CF596B00E9E6FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		831539AD2384982200CAD2DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				831539AE2384982200CAD2DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		83A33FF023CF596900E9E6FD /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83A33FF123CF596900E9E6FD /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		831539B12384982200CAD2DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		831539B22384982200CAD2DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		831539B42384982200CAD2DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"My Favourite Recipes/Preview Content\"";
+				DEVELOPMENT_TEAM = C233LQUF2Z;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "My Favourite Recipes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.packt.My-Favourite-Recipes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		831539B52384982200CAD2DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"My Favourite Recipes/Preview Content\"";
+				DEVELOPMENT_TEAM = C233LQUF2Z;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "My Favourite Recipes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.packt.My-Favourite-Recipes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		83A3400F23CF596B00E9E6FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C233LQUF2Z;
+				IBSC_MODULE = My_Favourite_Recipes_Watch_Extension;
+				INFOPLIST_FILE = "My Favourite Recipes Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.packt.My-Favourite-Recipes.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		83A3401023CF596B00E9E6FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C233LQUF2Z;
+				IBSC_MODULE = My_Favourite_Recipes_Watch_Extension;
+				INFOPLIST_FILE = "My Favourite Recipes Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.packt.My-Favourite-Recipes.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		83A3401223CF596B00E9E6FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"My Favourite Recipes Watch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = C233LQUF2Z;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "My Favourite Recipes Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.packt.My-Favourite-Recipes.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		83A3401323CF596B00E9E6FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"My Favourite Recipes Watch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = C233LQUF2Z;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "My Favourite Recipes Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.packt.My-Favourite-Recipes.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8315399A2384982000CAD2DD /* Build configuration list for PBXProject "My Favourite Recipes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				831539B12384982200CAD2DD /* Debug */,
+				831539B22384982200CAD2DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		831539B32384982200CAD2DD /* Build configuration list for PBXNativeTarget "My Favourite Recipes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				831539B42384982200CAD2DD /* Debug */,
+				831539B52384982200CAD2DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83A3401423CF596B00E9E6FD /* Build configuration list for PBXNativeTarget "My Favourite Recipes Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83A3401223CF596B00E9E6FD /* Debug */,
+				83A3401323CF596B00E9E6FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83A3401523CF596B00E9E6FD /* Build configuration list for PBXNativeTarget "My Favourite Recipes Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83A3400F23CF596B00E9E6FD /* Debug */,
+				83A3401023CF596B00E9E6FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 831539972384982000CAD2DD /* Project object */;
+}
