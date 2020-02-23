@@ -25,6 +25,7 @@ struct AddRecipeView: View {
     @State private var selectedCountry = 0
     
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var appData: AppData
     
     internal var countries = Helper.getCountries()
     private var numberOfCountires: Int {
@@ -124,11 +125,12 @@ struct AddRecipeView: View {
                                     favourite: false,
                                     ingredients: ingredients,
                                     recipe: recipeDetails,
-                                    imageData: recipeImage.pngData())
+                                    imageData: recipeImage.jpegData(compressionQuality: 0.3) ?? Data())
         
-        Helper.addRecipe(recipe: newRecipe)
+        // Update Local Saved Data
+        self.appData.recipes.append(newRecipe)
+        Helper.saveRecipes(recipes: self.appData.recipes)
         WatchManager.sharedInstance.send(recipe: newRecipe)
-        
         
     }
     

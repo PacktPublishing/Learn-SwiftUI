@@ -15,6 +15,8 @@ struct ContentView: View {
     
     @State private var filter: String = ""
     
+    @EnvironmentObject var appData: AppData
+    
     var body: some View {
         
         NavigationView {
@@ -43,7 +45,7 @@ struct ContentView: View {
                         Image(systemName: "plus")
                             .renderingMode(.original)
                     }.sheet(isPresented: $showAddRecipe) {
-                        AddRecipeView()
+                        AddRecipeView().environmentObject(self.appData)
                 })
             
             WelcomeView()
@@ -53,8 +55,33 @@ struct ContentView: View {
     }
 }
 
+class AppData: ObservableObject {
+    
+    @Published var fontColor = Color.black
+    @Published var recipes = [RecipeModel]()
+    var favourites: [RecipeModel] {
+        return recipes.filter({ $0.favourite == true })
+    }
+    func getRecipes(filter: String) -> [RecipeModel] {
+        if filter != "" {
+            return recipes.filter ({ $0.origin == filter })
+        } else {
+            return recipes
+        }
+    }
+    
+    func updateRecipe(recipe: RecipeModel) {
+        recipes = recipes.filter( { $0.id != recipe.id } )
+        recipes.append(recipe)
+    }
+    
+}
+
 struct ContentView_Previews: PreviewProvider {
+    static let appData = AppData()
+    
     static var previews: some View {
-        ContentView()
+        return ContentView().environmentObject(appData)
     }
 }
+

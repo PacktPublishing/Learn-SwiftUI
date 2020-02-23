@@ -30,6 +30,7 @@ struct AddRecipeView: View {
     @State private var loadingImage = false
     
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var appData: AppData
     
     let letters = Array("Loading Image")
     
@@ -138,11 +139,12 @@ struct AddRecipeView: View {
                                     favourite: false,
                                     ingredients: ingredients,
                                     recipe: recipeDetails,
-                                    imageData: recipeImage.pngData())
+                                    imageData: recipeImage.jpegData(compressionQuality: 0.3) ?? Data())
         
-        Helper.addRecipe(recipe: newRecipe)
+        // Update Local Saved Data
+        self.appData.recipes.append(newRecipe)
+        Helper.saveRecipes(recipes: self.appData.recipes)
         WatchManager.sharedInstance.send(recipe: newRecipe)
-        
         
     }
     

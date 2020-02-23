@@ -14,10 +14,10 @@ struct RecipeDetailView: View {
     @State private var viewIndex = 0
     
     private var isFavourite: Bool {
-        return Helper.getFavourites().contains(where: {($0.name == recipe.name)})
+        return recipe.favourite
     }
     
-    @EnvironmentObject var settings: AppSettings
+    @EnvironmentObject var appData: AppData
 
     var body: some View {
         // VStack so we can list our components vertically
@@ -34,13 +34,13 @@ struct RecipeDetailView: View {
                 Text("\(recipe.name)")
                     .font(.title)
                     .padding(.leading, 10)
-                    .foregroundColor(self.settings.fontColor)
+                    .foregroundColor(self.appData.fontColor)
                 
                 // Favourites Button
                 Button(action: {
-                    Helper.addRemoveFavourite(recipe: self.recipe)
-                    self.settings.fontColor = self.isFavourite ? .orange : .black
+                    self.appData.fontColor = self.isFavourite ? .orange : .black
                     self.recipe.favourite.toggle()
+                    self.appData.updateRecipe(recipe: self.recipe)
                 }) {
                     Image(systemName: isFavourite ? "star.fill" : "star")
                 }
@@ -77,7 +77,8 @@ struct RecipeDetailView: View {
 }
 
 struct RecipeDetailView_Previews: PreviewProvider {
+    static let appData = AppData()
     static var previews: some View {
-        RecipeDetailView(recipe: Helper.mockRecipes().first!)
+        RecipeDetailView(recipe: Helper.mockRecipes().first!).environmentObject(appData)
     }
 }

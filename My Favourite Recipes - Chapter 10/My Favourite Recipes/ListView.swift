@@ -14,6 +14,8 @@ struct ListView: View {
     @Binding var filter: String
     @Binding var showAddRecipe: Bool
     
+    @EnvironmentObject var appData: AppData
+    
     var body: some View {
         
             VStack {
@@ -23,14 +25,14 @@ struct ListView: View {
                 }.pickerStyle(SegmentedPickerStyle())
                                 
                 if viewIndex == 0 {
-                    List(Helper.getRecipes(filter: filter), id: \.id) { recipe in
+                    List(appData.getRecipes(filter: filter), id: \.id) { recipe in
                         NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                             RecipeView(recipe: recipe)
                         }
                     }
                 } else if viewIndex == 1 {
                     
-                    List(Helper.getFavourites(), id: \.id) { recipe in
+                    List(appData.favourites, id: \.id) { recipe in
                         NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                             RecipeView(recipe: recipe)
                         }
@@ -42,12 +44,10 @@ struct ListView: View {
     }
 }
 
-class UserData: ObservableObject {
-    @Published var favourites = Helper.getFavourites()
-}
-
 struct ListView_Previews: PreviewProvider {
+    static let appData = AppData()
     static var previews: some View {
-        ListView(filter: .constant(""), showAddRecipe: .constant(false))
+        appData.recipes = Helper.mockRecipes()
+        return ListView(filter: .constant(""), showAddRecipe: .constant(false)).environmentObject(appData)
     }
 }

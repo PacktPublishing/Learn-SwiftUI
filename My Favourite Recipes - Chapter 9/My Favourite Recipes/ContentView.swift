@@ -16,6 +16,8 @@ struct ListView: View {
     
     @State private var filter: String = ""
     
+    @EnvironmentObject var appData: AppData
+    
     var body: some View {
         
         NavigationView {
@@ -26,7 +28,7 @@ struct ListView: View {
                 }.pickerStyle(SegmentedPickerStyle())
                                 
                 if viewIndex == 0 {
-                    List(Helper.getRecipes(filter: filter), id: \.id) { recipe in
+                    List(appData.getRecipes(filter: filter), id: \.id) { recipe in
                         NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                             RecipeView(recipe: recipe)
                                 .navigationBarTitle(Text("Recipes"))
@@ -34,7 +36,7 @@ struct ListView: View {
                     }
                 } else if viewIndex == 1 {
                     
-                    List(Helper.getFavourites(), id: \.id) { recipe in
+                    List(appData.favourites, id: \.id) { recipe in
                         NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                             RecipeView(recipe: recipe)
                                 .navigationBarTitle(Text("Favourites"))
@@ -66,7 +68,7 @@ struct ListView: View {
                     Image(systemName: "plus")
                         .renderingMode(.original)
                 }.sheet(isPresented: $showAddRecipe) {
-                    AddRecipeView()
+                    AddRecipeView().environmentObject(self.appData)
                 })
             
         }.navigationViewStyle(DoubleColumnNavigationViewStyle())
@@ -74,12 +76,33 @@ struct ListView: View {
     }
 }
 
-class AppSettings: ObservableObject {
+class AppData: ObservableObject {
+    
     @Published var fontColor = Color.black
+    @Published var recipes = [RecipeModel]()
+    var favourites: [RecipeModel] {
+        return recipes.filter({ $0.favourite == true })
+    }
+    func getRecipes(filter: String) -> [RecipeModel] {
+        if filter != "" {
+            return recipes.filter ({ $0.origin == filter })
+        } else {
+            return recipes
+        }
+    }
+    
+    func updateRecipe(recipe: RecipeModel) {
+        recipes = recipes.filter( { $0.id != recipe.id } )
+        recipes.append(recipe)
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
+    static let appData = AppData()
+    
     static var previews: some View {
-        ListView()
+        appData.recipes = Helper.mockRecipes()
+        return ListView().environmentObject(appData)
     }
 }

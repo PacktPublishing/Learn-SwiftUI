@@ -13,6 +13,8 @@ struct ListView: View {
     @State private var viewIndex = 0
     @Binding var filter: String
     @Binding var showAddRecipe: Bool
+    
+    @EnvironmentObject var appData: AppData
         
     var body: some View {
         
@@ -24,7 +26,7 @@ struct ListView: View {
                                 
                 if viewIndex == 0 {
                     
-                    List(Helper.getRecipes(filter: filter), id: \.id) { recipe in
+                    List(appData.getRecipes(filter: filter), id: \.id) { recipe in
                         NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                             RecipeView(recipe: recipe)
                         }
@@ -32,7 +34,7 @@ struct ListView: View {
                     
                 } else if viewIndex == 1 {
                     
-                    List(Helper.getFavourites(), id: \.id) { recipe in
+                    List(appData.favourites, id: \.id) { recipe in
                         NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                             RecipeView(recipe: recipe)
                         }
@@ -45,12 +47,10 @@ struct ListView: View {
 
 }
 
-class AppSettings: ObservableObject {
-    @Published var fontColor = Color.black
-}
-
 struct ListView_Previews: PreviewProvider {
+    static let appData = AppData()
     static var previews: some View {
-        ListView(filter: .constant(""), showAddRecipe: .constant(false))
+        appData.recipes = Helper.mockRecipes()
+        return ListView(filter: .constant(""), showAddRecipe: .constant(false)).environmentObject(appData)
     }
 }

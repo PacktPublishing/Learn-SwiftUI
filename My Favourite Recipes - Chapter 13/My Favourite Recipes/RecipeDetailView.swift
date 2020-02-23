@@ -16,10 +16,10 @@ struct RecipeDetailView: View {
     @State private var angle: Double = 0
     
     private var isFavourite: Bool {
-        return Helper.getFavourites().contains(where: {($0.name == recipe.name)})
+        return recipe.favourite
     }
     
-    @EnvironmentObject var settings: AppSettings
+    @EnvironmentObject var appData: AppData
  
     var body: some View {
         
@@ -41,9 +41,9 @@ struct RecipeDetailView: View {
             
             // Favourites Button
             Button(action: {
-                Helper.addRemoveFavourite(recipe: self.recipe)
-                self.settings.fontColor = self.isFavourite ? .orange : .black
+                self.appData.fontColor = self.isFavourite ? .orange : .black
                 self.recipe.favourite.toggle()
+                self.appData.updateRecipe(recipe: self.recipe)
                 withAnimation(.spring()) {
                     self.angle = self.angle == 1080 ? 0 : 1080
                 }
@@ -59,7 +59,7 @@ struct RecipeDetailView: View {
             Text("\(recipe.name)")
                 .font(.title)
                 .padding(.leading, 10)
-                .foregroundColor(self.settings.fontColor)
+                .foregroundColor(self.appData.fontColor)
                     
             // Recipe origin
             Text("Origin: \(recipe.origin)")
@@ -91,7 +91,8 @@ struct RecipeDetailView: View {
 }
 
 struct RecipeDetailView_Previews: PreviewProvider {
+    static let appData = AppData()
     static var previews: some View {
-        RecipeDetailView(recipe: Helper.mockRecipes().first!)
+        RecipeDetailView(recipe: Helper.mockRecipes().first!).environmentObject(appData)
     }
 }

@@ -12,44 +12,9 @@ import MapKit
 
 struct Helper {
 
-    // Checks if recipe is already a Favourite
-    static func isFavourite(name: String) -> Bool {
-        return getFavourites().contains(where: {($0.name == name)})
-    }
-    
-    // Adds or Removes Recipe from Favourites
-    static func addRemoveFavourite(recipe: RecipeModel) {
-        
-        var favourites = getFavourites()
-        if !isFavourite(name: recipe.name) {
-            favourites.append(recipe)
-        } else {
-            favourites.removeAll(where: { $0.name == recipe.name })
-        }
-        
-        let data = try! JSONEncoder().encode(favourites)
-        UserDefaults.standard.set(data, forKey: "favourites")
-        
-    }
-    
-    // Gets List of Favourite Recipes
-    static func getFavourites() -> [RecipeModel] {
-        if let data = UserDefaults.standard.data(forKey: "favourites") {
-            let array = try! JSONDecoder().decode([RecipeModel].self, from: data)
-            return array
-        }
-        return [RecipeModel]()
-    }
-    
-    // Add Recipe
-    static func addRecipe(recipe: RecipeModel) {
-        
-        var recipes = getRecipes()
-        recipes.append(recipe)
-            
+    static func saveRecipes(recipes: [RecipeModel]) {
         let data = try! JSONEncoder().encode(recipes)
         UserDefaults.standard.set(data, forKey: "recipes")
-        
     }
     
     // Gets List of Saved Recipes
@@ -131,7 +96,7 @@ struct Helper {
         case "Mexico":
             return CLLocationCoordinate2D(latitude: 19.451054, longitude: -99.125519)
         case "Spain":
-            return CLLocationCoordinate2D(latitude: 40.416775, longitude: -3.703790)
+            return CLLocationCoordinate2D(latitude: 41.383, longitude: 2.183)
         default:
             return CLLocationCoordinate2D(latitude: 37.6160179, longitude: -122.3946882)
         }
