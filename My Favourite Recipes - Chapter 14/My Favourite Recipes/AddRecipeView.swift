@@ -27,13 +27,13 @@ struct AddRecipeView: View {
     @State private var scale: CGFloat = 1
     @State private var angle: Double = 0
     
-    @State private var loadingImage = false
+    @State private var validated = false
     
     @Environment(\.presentationMode) var presentationMode
     
     @EnvironmentObject var appData: AppData
     
-    let letters = Array("Loading Image")
+    @State var loadingImage = false
     
     internal var countries = Helper.getCountries()
     private var numberOfCountires: Int {
@@ -59,16 +59,24 @@ struct AddRecipeView: View {
                         .overlay(Circle().stroke(Color.purple, lineWidth: 3).shadow(radius: 10))
                         .frame(maxWidth: .infinity, maxHeight: 230)
                         .padding(6)
+                    if loadingImage {
+                        Text("Fetching Random Image")
+                            .transition(.asymmetric(insertion: .opacity, removal: .scale))
+                    }
                 }
                 .rotation3DEffect(.degrees(angle), axis: (x: 0, y: 1, z: 0))
                 .animation(.spring())
                 .sheet(isPresented: $showingImagePicker) {
                     ImagePicker(image: self.$libraryImage)
+                }.buttonStyle(PlainButtonStyle())
+                Button(action: {
+                    self.getRandomImage()
+                    withAnimation {
+                        self.loadingImage.toggle()
+                    }
+                }) {
+                    Text("Random Image")
                 }
-                .buttonStyle(PlainButtonStyle())
-                
-                
-
                 Section(header: Text("Add Recipe Name:")) {
                     TextField("enter recipe name", text: $recipeName)
                 }
@@ -105,12 +113,25 @@ struct AddRecipeView: View {
                     }
                 }
                 Button(action: {
-                    self.saveRecipe()
-                    self.presentationMode.wrappedValue.dismiss()
+                    if self.recipeName != "" {
+                        self.saveRecipe()
+                        self.presentationMode.wrappedValue.dismiss()
+                    } else {
+                        withAnimation {
+                            self.validated.toggle()
+                        }
+                    }
                 }) {
                     Text("Save")
                 }
-            }
+                if validated {
+                    Text("* Please give your recipe a name")
+                        .foregroundColor(.red)
+                        .bold()
+                        .transition(.move(edge: .top))
+                        .transition(AnyTransition.move(edge: .top))
+                }
+        }
         
     }
     
@@ -140,7 +161,7 @@ struct AddRecipeView: View {
                                     favourite: false,
                                     ingredients: ingredients,
                                     recipe: recipeDetails,
-                                    imageData: recipeImage.jpegData(compressionQuality: 0.3)!)
+                                    imageData: recipeImage.jpegData(compressionQuality: 0.3) ?? Data())
 
         // Update Local Saved Data
         self.appData.recipes.append(newRecipe)

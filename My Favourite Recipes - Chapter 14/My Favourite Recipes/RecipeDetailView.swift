@@ -61,7 +61,6 @@ struct RecipeDetailView: View {
                 .font(.subheadline)
                 .padding(.leading, 10)
             
-            
             // Picker to choose between Igredients & Recipe
             Picker(selection: $viewIndex.animation(), label: Text("")) {
                 Text("Ingredients").tag(0)

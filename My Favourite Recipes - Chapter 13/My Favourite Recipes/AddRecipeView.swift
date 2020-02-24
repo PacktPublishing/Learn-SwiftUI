@@ -63,11 +63,13 @@ struct AddRecipeView: View {
                 .animation(.spring())
                 .sheet(isPresented: $showingImagePicker) {
                     ImagePicker(image: self.$libraryImage)
+                }.buttonStyle(PlainButtonStyle())
+                Button(action: {
+                    self.getRandomImage()
+                }) {
+                    Text("Random Image")
                 }
-                .buttonStyle(PlainButtonStyle())
                 
-                
-
                 Section(header: Text("Add Recipe Name:")) {
                     TextField("enter recipe name", text: $recipeName)
                 }
