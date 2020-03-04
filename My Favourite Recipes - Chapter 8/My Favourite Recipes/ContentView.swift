@@ -28,7 +28,6 @@ struct ContentView: View {
                     List(appData.recipes, id: \.id) { recipe in
                         NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                             RecipeView(recipe: recipe)
-                                .navigationBarTitle(Text("Recipes"))
                         }
                     }
                 } else if viewIndex == 1 {
@@ -36,12 +35,12 @@ struct ContentView: View {
                     List(appData.favourites, id: \.id) { recipe in
                         NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                             RecipeView(recipe: recipe)
-                                .navigationBarTitle(Text("Favourites"))
                         }
                     }
                 }
                 
             }
+            .navigationBarTitle(Text(""), displayMode: .inline) // Hack due to bug in Xcode!
             .navigationBarItems(trailing:
                 Button(action: {
                     self.showAddRecipe.toggle()

@@ -31,7 +31,6 @@ struct ListView: View {
                     List(appData.getRecipes(filter: filter), id: \.id) { recipe in
                         NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                             RecipeView(recipe: recipe)
-                                .navigationBarTitle(Text("Recipes"))
                         }
                     }
                 } else if viewIndex == 1 {
@@ -39,7 +38,6 @@ struct ListView: View {
                     List(appData.favourites, id: \.id) { recipe in
                         NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                             RecipeView(recipe: recipe)
-                                .navigationBarTitle(Text("Favourites"))
                         }
                     }
                 }
