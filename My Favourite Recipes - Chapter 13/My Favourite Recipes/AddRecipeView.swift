@@ -135,9 +135,12 @@ struct AddRecipeView: View {
             recipeImage = libImage
         }
         
+        let country = countries[selectedCountry]
+        
         let newRecipe = RecipeModel(id: UUID(),
                                     name: recipeName,
-                                    origin: countries[selectedCountry], countryCode: "",
+                                    origin: country,
+                                    countryCode: Helper.getCountryCode(country: country),
                                     favourite: false,
                                     ingredients: ingredients,
                                     recipe: recipeDetails,
