@@ -140,7 +140,7 @@ struct AddRecipeView: View {
     
     private func getRandomImage() {
         
-        guard let url = URL(string: "https://lorempixel.com/300/200/food/") else {
+        guard let url = URL(string: "https://source.unsplash.com/300x200/?food") else {
             return
         }
         

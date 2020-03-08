@@ -114,8 +114,8 @@ struct AddRecipeView: View {
                                     imageData: recipeImage.jpegData(compressionQuality: 0.3) ?? Data())
         
         // Update Local Saved Data
-        self.appData.recipes.append(newRecipe)
-        Helper.saveRecipes(recipes: self.appData.recipes)
+        appData.recipes.append(newRecipe)
+        Helper.saveRecipes(recipes: appData.recipes)
         
     }
     
